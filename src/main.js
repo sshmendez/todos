@@ -34,11 +34,15 @@ Things to avoid:
 - API calls (local data is fine, no need use a real data source)
 */
 
-import Vue from "vue";
-import App from "./App.vue";
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
 
 Vue.config.productionTip = false;
 
+import '@/assets/css/tailwind.css';
+
 new Vue({
-  render: (h) => h(App)
-}).$mount("#app");
+  router,
+  render: h => h(App),
+}).$mount('#app');
