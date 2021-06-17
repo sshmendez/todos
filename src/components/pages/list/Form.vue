@@ -54,15 +54,13 @@ export default {
         isCompleted: false,
       };
 
-      this.clearForm();
       this.$emit('addTodo', newTodo);
+      this.clearForm();
     },
     clearForm() {
-      console.log('d')
       this.assignee = '';
       this.title = '';
       this.description = '';
-      console.log(this.assignee)
     },
   },
 };
